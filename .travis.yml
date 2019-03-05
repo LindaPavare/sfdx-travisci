@@ -23,5 +23,3 @@ script:
 - sfdx force:source:push -u ciorg
 - sfdx force:apex:test:run -u ciorg --wait 10
 - sfdx force:org:delete -u ciorg -p
-- sfdx force:auth:jwt:grant --username "$HUB_ORG" --jwtkeyfile "$JWT_KEY_FILE" --clientid "$CONNECTED_APP_CONSUMER_KEY" --setdefaultdevhubusername --setalias DevHub
-- sfdx force:mdapi:deploy -c -d src -w 20 -l RunLocalTests -u DevHub
